@@ -1,0 +1,51 @@
+﻿<Window x:Class="BeerExplorer.Views.BeerDetailView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Beer Details" Height="450" Width="800">
+	<Grid>
+		<StackPanel>
+			<TextBlock Text="{Binding SelectedBeerStyle.Name}" FontSize="24" Margin="10" />
+			<TextBlock Text="{Binding SelectedBeerStyle.Description}" Margin="10" />
+			<TextBlock Text="{Binding SelectedBeerStyle.Origin}" Margin="10" />
+			<TextBlock Text="{Binding SelectedBeerStyle.TasteProfile}" Margin="10" />
+			<TextBlock Text="Food Pairings:" FontSize="18" Margin="10" />
+			<ListBox ItemsSource="{Binding SelectedBeerStyle.FoodPairings}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel>
+							<TextBlock Text="{Binding Food}" FontWeight="Bold" />
+							<TextBlock Text="{Binding Reason}" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+			<TextBlock Text="Recipes:" FontSize="18" Margin="10" />
+			<ListBox ItemsSource="{Binding Recipes}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel>
+							<TextBlock Text="{Binding Name}" FontWeight="Bold" />
+							<TextBlock Text="{Binding Description}" />
+							<TextBlock Text="Ingredients:" FontWeight="Bold" />
+							<ItemsControl ItemsSource="{Binding Ingredients}" />
+							<TextBlock Text="Instructions:" FontWeight="Bold" />
+							<TextBlock Text="{Binding Instructions}" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+			<TextBlock Text="Reviews:" FontSize="18" Margin="10" />
+			<ListBox ItemsSource="{Binding Reviews}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel>
+							<TextBlock Text="{Binding User.Username}" FontWeight="Bold" />
+							<TextBlock Text="{Binding Comment}" />
+							<TextBlock Text="{Binding Rating}" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+	</Grid>
+</Window>

@@ -1,0 +1,48 @@
+[
+  {
+    "Name": "IPA",
+    "Description": "Hoppy and bitter.",
+    "Origin": "England",
+    "TasteProfile": "Bitter",
+    "ImagePath": "Images/ipa.jpg",
+    "FoodPairings": [
+      {
+        "Food": "Spicy food",
+        "Reason": "Balances the heat",
+        "Recipes": [
+          {
+            "Name": "Spicy Chicken Wings",
+            "Description": "Perfectly spicy chicken wings.",
+            "Ingredients": [ "1 lb chicken wings", "1/2 cup hot sauce", "1/4 cup butter, melted", "1 tbsp honey", "1 tsp garlic powder", "Salt and pepper to taste" ],
+            "Instructions": "Preheat oven to 400°F...",
+            "ImagePath": "Images/spicy_chicken_wings.jpg",
+            "PairedBeers": [ "IPA" ]
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "Name": "Stout",
+    "Description": "Dark and rich.",
+    "Origin": "Ireland",
+    "TasteProfile": "Roasty",
+    "ImagePath": "Images/stout.jpg",
+    "FoodPairings": [
+      {
+        "Food": "Oysters",
+        "Reason": "Contrasts the briny taste",
+        "Recipes": [
+          {
+            "Name": "Grilled Oysters",
+            "Description": "Delicious grilled oysters.",
+            "Ingredients": [ "12 oysters", "2 tbsp butter", "1 tsp garlic", "1 tbsp parsley" ],
+            "Instructions": "Grill oysters on medium heat...",
+            "ImagePath": "Images/grilled_oysters.jpg",
+            "PairedBeers": [ "Stout" ]
+          }
+        ]
+      }
+    ]
+  }
+]

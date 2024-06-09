@@ -1,0 +1,24 @@
+﻿<Window x:Class="BeerExplorer.Views.UserView"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="User Profile" Height="450" Width="800">
+	<Grid>
+		<StackPanel>
+			<TextBlock Text="User Profile" FontSize="24" Margin="10" />
+			<TextBlock Text="Favorites:" FontSize="18" Margin="10" />
+			<ListBox ItemsSource="{Binding Favorites}" DisplayMemberPath="Name" Margin="10" />
+			<TextBlock Text="Reviews:" FontSize="18" Margin="10" />
+			<ListBox ItemsSource="{Binding Reviews}" Margin="10">
+				<ListBox.ItemTemplate>
+					<DataTemplate>
+						<StackPanel>
+							<TextBlock Text="{Binding BeerStyle.Name}" FontWeight="Bold" />
+							<TextBlock Text="{Binding Comment}" />
+							<TextBlock Text="{Binding Rating}" />
+						</StackPanel>
+					</DataTemplate>
+				</ListBox.ItemTemplate>
+			</ListBox>
+		</StackPanel>
+	</Grid>
+</Window>
